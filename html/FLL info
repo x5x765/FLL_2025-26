@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+        <script>
+        </script>
+        <style>
+            body{
+                background-color:black;
+                color:white;
+            }
+            .border{
+                border:5px ridge;
+                margin:5px;
+                padding:5px;  
+            }
+            a{
+                font-size:25px;
+                margin:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="border">Our Solution to the Challenge:</h1>
+        <!--Problem Statement-->
+        <div class="border"><h2>Problem Statement</h2><p></p></div>
+        <!--Solution-->
+        <div class="border"><h2>Solution</h2><p></p></div>
+        <!--Link to game-->
+        <a href="">The Game</a>
+    </body>
+</html>
