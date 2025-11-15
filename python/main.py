@@ -1,5 +1,5 @@
 import pygame as pg
-from objects import *
+from piece import Piece
 pg.init()
 
 pg.mixer.init()
@@ -10,11 +10,13 @@ screen = pg.display.set_mode((0, 0), pg.FULLSCREEN)
 pg.display.set_caption("Artifact Piece")
 clock = pg.time.Clock()
 piece = Piece(200, 200, r"images\piece1.png")
+
 running = True
 while running:
     piece.update(screen)
     screen.fill((230, 230, 230))
     piece.draw(screen)
+    # pg.draw.rect(screen, (0, 0, 0), [200, 200, 20, 20])
     for event in pg.event.get():
         if event.type == pg.QUIT:
             running = False
