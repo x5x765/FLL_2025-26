@@ -35,7 +35,7 @@ while running:
     for piece in pieces:
         piece.update(screen)
         piece.draw(screen)
-    # pg.draw.rect(screen, (0, 0, 0), [200, 200, 20, 20])
+    # pg.draw.rect(screen, (0, 0, 0), [200, 200, 20, 20]) #for debug
     for event in pg.event.get():
         if event.type == pg.QUIT:
             running = False

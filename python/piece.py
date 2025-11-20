@@ -13,13 +13,15 @@ class Piece:
         self.image.set_colorkey((255, 255, 255))
         self.isSelected = False
         self.rect.center = (self.x, self.y)
+        self.isInPlace = False
 
     def draw(self, screen):
         screen.blit(self.image, (self.rect.x, self.rect.y))
 
     def update(self, screen):
-        if self.isSelected:
+        if self.isSelected and not self.isInPlace:
             screen.blit(self.image, self.rect)
             self.rect.center = pygame.mouse.get_pos()
         if self.rect.centerx in range(self.xGoal-10, self.xGoal+10):
             self.rect.center = (self.xGoal, self.yGoal)
+            self.isInPlace = True
