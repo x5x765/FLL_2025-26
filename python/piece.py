@@ -4,8 +4,8 @@ pygame.init()
 
 class Piece:
     def __init__(self, xGoal, yGoal, image_path):
-        self.x = randint(100, 1820)
-        self.y = randint(100, 980)
+        self.x = randint(50, 1500)
+        self.y = randint(50, 800)
         self.xGoal = xGoal
         self.yGoal = yGoal
         self.image = pygame.image.load(image_path).convert()
@@ -23,4 +23,3 @@ class Piece:
             self.rect.center = pygame.mouse.get_pos()
         if self.rect.centerx in range(self.xGoal-10, self.xGoal+10):
             self.rect.center = (self.xGoal, self.yGoal)
-
