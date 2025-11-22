@@ -1,6 +1,8 @@
 from random import randint
 import pygame
+from pygame.mixer import Sound
 pygame.init()
+pygame.mixer.init()
 
 class Piece:
     def __init__(self, xGoal, yGoal, image_path):
@@ -13,6 +15,7 @@ class Piece:
         self.rect.center = (randint(50, 1500), randint(50, 800))
         self.isInPlace = False
         self.imagePath = image_path
+        self.snapSound = Sound(r"sounds\snap.mp3")
 
     def __str__(self):
         return f"{str(self.rect.centerx)}, {str(self.rect.centery)}, {self.imagePath}"
@@ -26,3 +29,4 @@ class Piece:
         if self.rect.centerx in range(self.xGoal-10, self.xGoal+10) and self.rect.centery in range(self.yGoal-10, self.yGoal+10) and not self.isInPlace:
             self.rect.center = (self.xGoal, self.yGoal)
             self.isInPlace = True
+            self.snapSound.play()
