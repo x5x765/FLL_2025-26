@@ -1,5 +1,4 @@
 import time
-
 import pygame as pg
 from piece import Piece
 from time import sleep
@@ -65,11 +64,5 @@ while running:
         elif event.type == pg.KEYDOWN:
             if event.key == pg.K_ESCAPE:
                 running = False
-            elif event.key == pg.K_s: # for debug
-                save = open("coords.txt", "wt")
-                for piece in pieces:
-                    save.write(str(piece) + "\n")
-                save.close()
-                del save
     pg.display.flip()
     clock.tick(60)
