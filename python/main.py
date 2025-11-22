@@ -41,7 +41,6 @@ piece12 = Piece(848, 505, r"images\piece (12).png")
 piece13 = Piece(630, 645, r"images\piece (13).png")
 piece14 = Piece(754, 616, r"images\piece (14).png")
 piece15 = Piece(865, 642, r"images\piece (15).png")
-base_pot = Piece(800, 425, r"images\base_pot_cracked.png")
 
 pieces = [piece1, piece2, piece3, piece4, piece5, piece6, piece7, piece8, piece9, piece10, piece11, piece12, piece13, piece14, piece15]
 
