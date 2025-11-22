@@ -1,5 +1,4 @@
 import time
-
 import pygame as pg
 from piece import Piece
 from time import sleep
